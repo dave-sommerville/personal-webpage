@@ -1,93 +1,220 @@
+/*----------------------------------------------->
+    Initial Formatting 
+<-----------------------------------------------*/
+
 @charset "utf-8";
 
 html{
-
-  font-family: "Fira Sans Condensed", "Poppins", sans-serif;}
+  font-family: "Fira Sans Condensed", "Poppins", sans-serif;
+}
 
 a {
   text-decoration: none;
-  color: #222;
+  color: #fff;
 }
 
 body {    
   transition: background-color  0.5s ease, color 0.5s ease;
-  background-color: #fcfdfe;
+  background: #fefdfc;
   margin: 0;
 }
 
-header{
-  height: fit-content;
-  background-color: #1d1953;
-}
-
 .top-bar {
-  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 100%;
+  color: white;
+  padding: 15px 20px;
   font-size: 26px; 
   color: #fff;
-  line-height: 75px;
+  background-color: #234;
+  line-height: 35px;
+  padding: 0 25px; 
   justify-content: space-between;
-}
-
-.title {
-  height: 150px;
-  width: 100%; 
-  background-color: #fff;
   text-align: center;
-  line-height: 150px;
-  font-size: 50px; 
-  box-shadow: inset 2px 1px 3px #666;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+  z-index: 10; 
 }
 
-.row-one, .row-three, .row-four {
+.top-bar.visible {
+  transform: translateY(0);
+}
+
+/*----------------------------------------------->
+  Hero Banner and Conents 
+<-----------------------------------------------*/
+
+.hero-banner {
+    width: 100%;
+    height: 70svh;
+    justify-content: center;
+    align-items: center;
+    background-color: #234;
+    z-index: -1; 
+}
+
+.laptop, .coffee {
+  img {
+    width: 600px;
+    height: auto;
+  }
+}
+
+.banner-content {
+  width: 40svw;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button, .github {
+  width: 120px;
+  padding: 10px 0;
+  font-family: "Fira Sans Condensed", "Poppins", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+/*  NEED HOVER EFFECTS!! */
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.btns {
+  width: 100%; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cta-button {
+  background-color: #2a7f7f;
+  border: solid 2px #fff;
+}
+
+.github {
+  border: solid 1.5px #2a7f7f;
+  color: #2a7f7f;
+  background-color: rgb(245 250 255 / 0.2);
+  font-weight: 500;
+}
+
+/*----------------------------------------------->
+    Heading formats 
+<-----------------------------------------------*/
+
+h1 {
+      font-size: 5svw;
+      margin: 0;
+      animation: slideIn 1s forwards'
+  }
+
+  h2 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 2.5svw;
+    font-weight: 400;
+    color: #fff;
+    line-height: 2svw;
+    margin: 5px; 
+  }
+
+h4 {
+  font-size: 1.5rem; 
+  color: #123; 
+}
+
+h5 {
+  font-size: 5svw;
+  text-align: center;
+  font-family: "Fira Sans Condensed", "Poppins", sans-serif;
+  color: #123;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  animation: slideIn 1.5s forwards;
+}
+
+
+/*----------------------------------------------->
+    Body structure - Rows & Columns 
+<-----------------------------------------------*/
+
+.row-one, .row-two, .row-three {
   height: 600px; 
   width: 100%; 
-
-  .col-one {
-    width: 50%;   height: 100%; 
-    background-color: #666;
-  }
-  
-  .col-two {
-    width: 50%;   height: 100%; 
-    background-color: #26d;
-  }
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.row-two {
-  height: 600px;
+.row-four {
+  height: fit-content; 
   width: 100%; 
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
-    .col-one {
-      width: calc(100% - 500px);   height: 100%; 
-      background-color: #3d8;
-    }
+.column {
+  flex: 1; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  margin: 10px; 
+}
 
-    .col-two {
-      height: 100%; 
-      width: 500px;
-      background-color: #cc5; 
-    }
+/*----------------------------------------------->
+    Body structure - Components 
+<-----------------------------------------------*/
 
+
+.chart-container {
+  justify-content: left;
+  width: 400px;   height: 100%;
+}
+
+  .progress-chart{
+    width: 400px;  height: 500px;
+    align-items: flex-end;
     div {
       width: 25%;
       text-align: center;
       align-content: flex-end;
+      justify-content: flex-end;
     }  
 
     .html { 
       background-color: #e58; 
+      height: 80%;
     }
 
     .css { 
       background-color: #298; 
+      height: 70%;
     }
 
     .js { 
       background-color: #4a3; 
+      height: 50%;
     }
 
     .cplus { 
       background-color: #26d; 
+      height: 5%;
     }
 
   span {
@@ -97,12 +224,150 @@ header{
   }
 }
 
-.icon-container {
-  width: 280px;   height: 100%; 
-  background-color: #cc5;
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
 
-  div {
-    width: 250px;   height: 250px; 
-    background-color: #e2f;
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-circle {
+  background-color: #234;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border: solid 6px #fff;  
+
+  .fa-github, .fa-at {
+    font-size: 4rem;
+    color: #2a7f7f;
+    line-height: 100px;
+  }
+
+  .fa-linkedin, .fa-file {
+  font-size: 3.7rem;
+  color: #2a7f7f;
+  line-height: 100px;
+  }
+}
+
+details {
+  text-align: center;
+  width: 100%;
+  height: 2rem; 
+
+  summary {
+  width: 100%; 
+  list-style: none;
+  font-size: 1.5rem;
+  color: #007bff;
+  cursor: pointer; 
+}
+}
+
+/*----------------------------------------------->
+    Body structure - image components
+<-----------------------------------------------*/
+
+.profile {
+  img {
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50%;
+  }
+}
+
+.school {
+  img {
+    height: auto;
+    width: 400px;
+    margin-top: 10px;
+  };
+}
+
+.construction { 
+  img {
+    width: 300px; height: auto;
+    box-shadow: inset 2px 4px 3px #123;
+    background: #4a3 url("../img/fixed-background.jpg") no-repeat center center;
+    background-size: contain;
+    background-attachment: fixed;
+
+  }
+}
+
+/*----------------------------------------------->
+  Animatations
+<-----------------------------------------------*/
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/*----------------------------------------------->
+    Media Queries 
+<-----------------------------------------------*/
+
+@media (max-width: 600px) {
+  .icon-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .row-one, .row-two, .row-three, .row-four {
+      flex-direction: column; 
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-banner {
+    height: 85svh;
+    flex-direction: column;
+  }
+
+  .banner-content {
+    width: 100%;
+  }
+
+  .btns {
+    flex-direction: row;
+    gap: 10px;
+    a{
+        width: 90px;
+        font-size: 0.8rem;
+    }
+  }
+  
+  h1 {
+    font-size: 9svw;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 4svw; 
+  }
+
+  .laptop, .coffee {
+    img {
+      width: 40svw; 
+    }
   }
 }

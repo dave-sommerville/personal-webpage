@@ -12,114 +12,171 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link 
                 href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="./src/css/style.css" media="all">
             <link rel="stylesheet" href="./src/css/reset.css" media="all">
             <link rel="stylesheet" href="./src/css/util.css" media="all">
+            <script src="./src/js/script.js" defer></script>
         </head>
         <body>
             <header>
-                <section class="top-bar container flex w-100">
-                    <h2>Dave Sommerville</h2>
+                <section class="hero-banner flex">
+                    <figure class="laptop">
+                        <img src="./src/img/banner1.PNG">
+                    </figure>
+                    <div class="banner-content flex">
+                        <h1>Dave Sommerville</h1>
+                        <h2>Developer</h2>
+                        <h2 class="and">&&</h2> 
+                        <h2>Creator</h2>
+                        <div class="btns flex">
+                            <a href="mailto:dave.r.sommerville@outlook.com" 
+                            class="cta-button">Say hello!</a>
+                            <a href="https://github.com/dave-sommerville" 
+                            class="github">See my work</a>
+                        </div>
+                    </div>
+                    <figure class="coffee">
+                        <img src="./src/img/banner2.png">
+                    </figure>
+                </section>
+               <section class="top-bar flex">
+
+                    <h3>Dave Sommerville</h3>
                     <a href="mailto: dave.r.sommerville@outlook.com">
                         Send me a message
                     </a>
                 </section>
             </header>
-            <main>
-                <!--        HERO BANNER         -->
-                <section class="hero-banner">
-                    <h1></h1>
-                    <button></button>
-                </section>
-
-                <!--        About section         -->
-                <div class="title">
-                    <h3>My Story</h3>
-                </div>
-                <section class="row-one flex container">
-                    <figure class="flex col-one">
+            <main class="container">
+                <section class="row-one flex">
+                    <article class="blurb flex column">
+                        <p>
+                            I am an infinitely curious and stubbornly driven 
+                            individual whose path has led through diverse 
+                            fields and countless meaningful interactions. My 
+                            enthusiasm for learning and embracing new 
+                            challenges has guided me to my current passion: 
+                            Full Stack Web Development.
+                        </p>
+                    </article>
+                    <figure class="profile flex column">
+                        <img src="./src/img/profile-img.jpg" alt="Profile 
+                        picture of me" title="hi!">
                     </figure>
-                    <article class="blurb col-two">
+                </section>
+                <section class="row-two flex">
+                    <article class="school flex column">
                         <p>
-                            Write some stuff about me here
+                            Currently, I am pursuing Software Development at 
+                            Manitoba Institute of Trades and Technology, where
+                            I'm building a strong foundation in modern 
+                            development practices.
+                        </p>
+                        <img src="./src/img/school-pic.jpg" 
+                        alt="Exterior photo of Manitoba Institute for Trades 
+                        and Technology" title="MITT">
+
+                    </article>
+                    <div class="chart-container flex column">
+                        <div class="flex progress-chart">
+                            <div class="html"><span>HTML</span></div>
+                            <div class="css"><span>CSS</span></div>
+                            <div class="js"><span>JS</span></div>
+                            <div class="cplus"><span>C++</span></div>                        
+                        </div>
+                        <p>
+                            My focus lies in frontend development, mastering 
+                            core technologies like HTML, CSS, and JavaScript, 
+                            while preparing to expand my expertise into more
+                            structured programming languages such as C++. Each 
+                            new concept drives me to want to learn more.
+                        </p>
+                    </div>
+                </section>
+                <section class="row-three flex">
+                    <div class="experience flex column">
+                        <ul>        
+                            <li>Customer Service <span>15 years</span></li>
+                            <li>Hospitality <span>8 years</span></li>
+                            <li>Sales <span>4 years</span></li>
+                            <li>Administration <span>13 years</span></li>
+                            <li>Management <span>5 years</span></li> 
+                            <li>Healthcare <span>4 years</span></li>
+                        </ul>
+                    </div>
+                    <article class="job-blurb flex column">
+                        <p>
+                            Prior to becoming a student, I was in the workforce, 
+                            building a versatile skill set and finding 
+                            opportunities through networking and referrals. 
+                            Often employed in multiple fields at once, I 
+                            quickly accrued robust experience in a variety of 
+                            fields.   
+                        </p>
+                        <p>
+                            This has sharpened my skills such as interpersonal 
+                            communication, task and time management, problem 
+                            solving, and organization. 
                         </p>
                     </article>
                 </section>
-
-                <!--        MITT                 -->
-                <div class="title">
-                    <h3>My Learning</h3>
-                </div>
-                <section class="row-two flex container">
-                    <article class="col-one">
+                <section class="row-four  flex">
+                    <div class="icon-grid">
+                        <div class="icon-box">
+                            <div class="icon-circle">
+                                <i class="fa-brands fa-github"></i>
+                            </div>
+                            <h4>GitHub</h4>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon-circle">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                            <h4>Linked In</h4>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-at"></i>
+                            </div>
+                            <h4>Email</h4>
+                        </div>
+                        <div class="icon-box">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-file"></i>
+                            </div>
+                            <h4>My CV</h4>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                <details>
+                    <summary>
+                        Click here to reveal more information
+                    </summary>
+                    <div class="construction">
                         <p>
-
+                            My Current Works in Progress
                         </p>
-                    </article>
-                    <div class="flex col-two">
-                        <div class="html"><span>HTML</span></div>
-                        <div class="css"><span>CSS</span></div>
-                        <div class="js"><span>JS</span></div>
-                        <div class="cplus"><span>C++</span></div>                        
-                    </div>
-
-                </section>
-
-                <!--          Experience          -->
-                <div class="title">
-                    <h3>My Experience</h3>
-                </div>
-                <section class="row-three flex container">
-                    <div class="col-one flex">
-                        <div class="icon-container flex">
-                                <div class="icon circle">
-                                    <a href="">
-                                        <i></i>
-                                    </a>
-                                </div>
-                                <h4></h4>
-                            </div>
-                            <div class="icon circle">
+                        <ul class="wip">
+                            <li>
                                 <a href="">
                                     <i></i>
                                 </a>
-                            </div>
-                            <h4></h4>
-                        </div>
-                    </div>
-                    <article class="col-two">
-                        <p></p>
-                    </article>
-                </section>
-
-                <!--            Project             -->
-                <div class="title">
-                    <h3>My Projects</h3>
-                </div>
-                <section class="row-four flex container">
-                    <article class="col-one">
-
-                    </article>
-                    <div class="col-two flex">
-
-                            <div class="icon circle">
+                            </li>
+                            <li>
                                 <a href="">
                                     <i></i>
                                 </a>
-                            </div>
-                        </div>
-                        <div class="col-two">
-                            <figure class="icon circle">
-                                <a href="">
-                                    <i></i>
-                                </a>
-                            </figure>
-                        </div>
+                            </li>
+                        </ul>
+                        <img src="./src/img/construcction.png" alt="construction
+                        image">
                     </div>
-                </section>
+                </details>
             </main>      
         <footer>
         </footer>

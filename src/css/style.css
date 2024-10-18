@@ -13,11 +13,62 @@ a {
   color: #fff;
 }
 
+ul {
+  list-style: none;
+}
+
 body {    
   transition: background-color  0.5s ease, color 0.5s ease;
   background: #fefdfc;
   margin: 0;
 }
+
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+}
+.flex {
+  display: flex;
+}
+
+
+/*----------------------------------------------->
+    Text formats 
+<-----------------------------------------------*/
+
+h1 {
+      font-size: 5svw;
+      margin: 0;
+      animation: slideIn 1s forwards'
+  }
+
+  h2 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 2.5svw;
+    font-weight: 400;
+    color: #fff;
+    line-height: 2svw;
+    margin: 5px; 
+  }
+
+h4 {
+  font-size: 1.5rem; 
+  color: #123; 
+}
+
+h5 {
+  font-size: 5svw;
+  text-align: center;
+  font-family: "Fira Sans Condensed", "Poppins", sans-serif;
+  color: #123;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  animation: slideIn 1.5s forwards;
+}
+
 
 .top-bar {
   position: fixed;
@@ -25,7 +76,6 @@ body {
   left: 0;
   height: 35px;
   width: 100%;
-  color: white;
   padding: 15px 20px;
   font-size: 26px; 
   color: #fff;
@@ -38,6 +88,7 @@ body {
   transition: transform 0.4s ease;
   z-index: 10; 
 }
+
 
 .top-bar.visible {
   transform: translateY(0);
@@ -83,11 +134,11 @@ body {
   margin-bottom: 10px;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s;
-}
-/*  NEED HOVER EFFECTS!! */
-.cta-button:hover {
-  background-color: #0056b3;
+  transition: background-color 0.4s, transform 0.4s ease-in;
+  
+  &:hover {
+  transform: scale(1.05);
+  }
 }
 
 .btns {
@@ -105,46 +156,9 @@ body {
 
 .github {
   border: solid 1.5px #2a7f7f;
-  color: #2a7f7f;
+  color: #fff;
   background-color: rgb(245 250 255 / 0.2);
   font-weight: 500;
-}
-
-/*----------------------------------------------->
-    Heading formats 
-<-----------------------------------------------*/
-
-h1 {
-      font-size: 5svw;
-      margin: 0;
-      animation: slideIn 1s forwards'
-  }
-
-  h2 {
-    font-family: "Homemade Apple", cursive;
-    font-size: 2.5svw;
-    font-weight: 400;
-    color: #fff;
-    line-height: 2svw;
-    margin: 5px; 
-  }
-
-h4 {
-  font-size: 1.5rem; 
-  color: #123; 
-}
-
-h5 {
-  font-size: 5svw;
-  text-align: center;
-  font-family: "Fira Sans Condensed", "Poppins", sans-serif;
-  color: #123;
-}
-
-p {
-  font-size: 1.5rem;
-  margin: 10px 0;
-  animation: slideIn 1.5s forwards;
 }
 
 
@@ -153,11 +167,11 @@ p {
 <-----------------------------------------------*/
 
 .row-one, .row-two, .row-three {
-  height: 600px; 
+  height: fit-content; 
   width: 100%; 
   justify-content: space-between;
   padding: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .row-four {
@@ -224,11 +238,29 @@ p {
   }
 }
 
+.experience ul{
+  font-family: "Fira Sans Condensed", "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  background-color: #298; 
+  padding: 10px;
+  border-radius: 8px; 
+
+  span {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
+
+  p {
+    cursor: pointer;
+  }
 }
 
 .icon-box {
@@ -247,15 +279,21 @@ p {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  border: solid 6px #fff;  
-
-  .fa-github, .fa-at {
+  border: solid 6px #fff;
+  transition: transform 0.3s ease-in;
+  cursor: pointer;
+  
+  &:hover {
+  transform: scale(1.1);
+  }  
+  
+  .fa-github {
     font-size: 4rem;
     color: #2a7f7f;
     line-height: 100px;
   }
 
-  .fa-linkedin, .fa-file {
+  .fa-linkedin, .fa-file, .fa-camera-retro {
   font-size: 3.7rem;
   color: #2a7f7f;
   line-height: 100px;
@@ -273,7 +311,7 @@ details {
   font-size: 1.5rem;
   color: #007bff;
   cursor: pointer; 
-}
+} 
 }
 
 /*----------------------------------------------->
@@ -282,8 +320,8 @@ details {
 
 .profile {
   img {
-    width: 350px; 
-    height: 350px; 
+    width: 500px; 
+    height: auto; 
     border-radius: 50%;
   }
 }
@@ -327,7 +365,7 @@ details {
 
 @media (max-width: 600px) {
   .icon-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 2fr);
   }
 }
 
@@ -370,4 +408,9 @@ details {
       width: 40svw; 
     }
   }
+
+  .top-bar {
+  font-size: 16px; 
+  }
 }
+

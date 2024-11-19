@@ -21,10 +21,47 @@ listen("scroll", window, () => {
     header.classList.remove("visible");
   }
 });
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Line Drawing Animation</title>
+    <style>
+        svg {
+            width: 100%;
+            height: 200px;
+        }
+
+        .line {
+            fill: none;
+            stroke: #3498db;
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 0, 1000;  /* Length of the line (arbitrary large value) 
+            animation: drawLine 3s ease-out forwards;
+        }
+
+        @keyframes drawLine {
+            to {
+                stroke-dasharray: 1000, 0;  /* Animate stroke-dasharray to 0, which 'draws' the line 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <svg viewBox="0 0 500 200">
+        <path class="line" d="M10,150 Q150,50 300,150 T490,150" />
+    </svg>
+
+</body>
+</html>
 
 
-
-
+*/
 /*
 
 modeSwitch.addEventListener('click', function() {
